@@ -1,0 +1,49 @@
+<!-- <div class="card text-white bg-info mb-3">
+    <div class="card-header">Create a new guide</div>
+    <div class="card-body">
+      <div class="form-group row">
+        <label for="title" class="col-sm-3 col-form-label">Title</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control-plaintext" id="title" placeholder="Guide Title" [(ngModel)]="newGuide.title">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="description" class="col-sm-3 col-form-label">Description</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control-plaintext" id="description" placeholder="Guide Description" [(ngModel)]="newGuide.description">
+        </div>
+      </div>
+
+    </div>
+  </div> -->
+<div class="card">
+  <div class="card-header">Create a new guide</div>
+  <div class="card-body">
+    <form [formGroup]="guideForm" (ngSubmit)="addGuide(guideForm.value)" class="form-add">
+
+
+      <div class="form-group form-group-add">
+        <label for="title" class="control-label label-add">Title *</label>
+        <input type="text" class="form-control" id="title" placeholder="Input modification title*"
+          formControlName="title" required [(ngModel)]="newGuide.title">
+        <small *ngIf="!isUnique">*The title must be unique</small>
+      </div>
+
+      <div class="form-group">
+        <label for="description" class="control-label label-add">Description</label>
+        <!-- <input type="text" class="form-control" id="description" placeholder="Input modification description"
+        formControlName="description"> -->
+        <editor apiKey="8bdr7ylurvmlsh94giyfy3t9anog6htufarun9xdpu5c4s93" [init]="{
+        skin: 'borderless',
+        menubar: false,
+        branding: false,
+        placeholder: 'Write here your text'
+      }" formControlName="description" [(ngModel)]="newGuide.description"></editor>
+      </div>
+
+        <button [disabled]="!guideForm.valid" class="btn btn-warning mr-2" (click)="onCreate()">Create</button>
+        <button class="btn btn-secondary" mat-dialog-close mat-dialog-close="false">Cancel</button>
+
+    </form>
+  </div>
+</div>

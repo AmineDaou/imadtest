@@ -1,0 +1,100 @@
+.form-update{
+  padding: 12px;
+}
+.label-update{
+  font-weight: 550;
+  font-size: 130%;
+}
+.form-group{
+  margin-bottom: 40px;
+}
+.form-group-update small{
+  color:red;
+}
+.card-header-update{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #dfdfdf;
+}
+
+.button-update{
+  background-color: #fe3945;
+  color:white;
+  width: 200px;
+  border-radius: 15px;
+  margin-top: 6px;
+}
+
+input[type="text"],
+select.form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000000;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+input[type="text"]:focus,
+select.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.card-header-upload{
+  height:40px;
+  width: 500px;
+  border: 1px dashed grey;
+  background-color: white;
+}
+
+.card-header-upload img{
+  height: 40px;
+  width: 40px;
+}
+
+
+
+.main-section{
+	margin-top: 100px;
+	background-color: #fff;
+	box-shadow: 0px 0px 20px #c1c1c1;
+}
+.fileinput-remove,
+.fileinput-upload{
+	display: none;
+}
+
+
+body {
+  background-color: #f2f7fb
+}
+
+.mt-100 {
+  margin-top: 100px
+}
+
+.upload-col{
+  border: 1px dashed lightgrey;
+  border-width: 3px;
+  margin-right: 20px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+.upload-span{
+  color:lightskyblue;
+  cursor: pointer;
+}
+
+.upload-img{
+  height: 80px;
+  width: 100px;
+}
+.upload-img2{
+  height: 80px;
+  width: 120px;
+}
+.upload-img3{
+  height: 80px;
+  width: 65px;
+}

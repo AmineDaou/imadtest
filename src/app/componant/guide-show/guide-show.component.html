@@ -1,0 +1,19 @@
+<div *ngIf="selectedGuide; else elseBlock">
+  <div class="card card-show">
+    <div class="card-header card-header-show">
+      <h2>{{selectedGuide.title}}</h2>
+      <!-- <p>{{selectedGuide.description}}</p> -->
+      <div [innerHTML] = "selectedGuide.description"></div>
+    </div>
+  </div>
+</div>
+<ng-template #elseBlock>
+  <div class="card card-show">
+    <div class="card-header card-header-show">
+      <h2>(Selected Guide)</h2>
+      <div><p>(Selected Guide Description)</p></div>
+    </div>
+  </div>
+</ng-template>
+
+

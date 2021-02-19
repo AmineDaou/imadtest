@@ -1,0 +1,81 @@
+<div *ngIf="selectedGuide; else elseBlock">
+  <!-- <div class="card text-white bg-secondary">
+    <div class="card-header">{{selectedGuide.title}}</div>
+    <div class="card-body">
+      <p class="card-text">{{selectedGuide.description}}</p>
+    </div>
+  </div> -->
+
+  <div class="card text-black">
+    <div class="card-header card-header-update">Modification du guide</div>
+    <div class="card-body">
+
+      <form [formGroup]="guideForm" (ngSubmit)="updateGuide(guideForm.value)" class="form-update">
+
+
+        <div class="form-group form-group-update">
+          <label for="title" class="control-label label-update">Title *</label>
+          <input type="text" class="form-control" id="title" placeholder="Input modification title*"
+            formControlName="title" required unique>
+          <small *ngIf="!isUnique">*The title must be unique</small>
+        </div>
+
+        <div class="form-group">
+          <label for="description" class="control-label label-update">Description</label>
+          <!-- <input type="text" class="form-control" id="description" placeholder="Input modification description"
+            formControlName="description"> -->
+          <editor apiKey="8bdr7ylurvmlsh94giyfy3t9anog6htufarun9xdpu5c4s93" [init]="{
+            skin: 'borderless',
+            menubar: false,
+            branding: false,
+            placeholder: 'Write here your text'
+          }" formControlName="description"></editor>
+        </div>
+
+        <div class="form-group">
+          <label for="file" class="control-label label-update">Add Files</label>
+          <div class="row">
+            <div class="col-3 upload-col ml-5">
+              <img src="../../../assets/images/photo.PNG" class="upload-img">
+              <p>Upload photo or <span class="upload-span">Drang & drop</span></p>
+            </div>
+
+            <div class="col-3 upload-col">
+              <img src="../../../assets/images/youtube.PNG" class="upload-img2">
+              <p>Upload video or <span class="upload-span">Drang & drop</span></p>
+            </div>
+
+            <div class="col-3 upload-col">
+              <img src="../../../assets/images/pdf.PNG" class="upload-img3">
+              <p>Upload PDF or <span class="upload-span">Drang & drop</span></p>
+            </div>
+          </div>
+
+
+
+          <!--
+            <input id="file" type="file" class="form-control" multiple
+            (change)="onFilesSelected($event)">
+            <button type="button" (click)="onUploadFiles()">Upload</button> -->
+
+
+        </div>
+
+
+        <button mat-raised-button class="button-update" [disabled]="!guideForm.valid">Save</button>
+
+      </form>
+
+    </div>
+  </div>
+
+</div>
+
+<ng-template #elseBlock>
+  <div class="card text-black">
+    <div class="card-header card-header-update">Please Select A Guide To Modify It</div>
+    <div class="card-body">
+      <p class="card-text">(Selected Guide Description)</p>
+    </div>
+  </div>
+</ng-template>

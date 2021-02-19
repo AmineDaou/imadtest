@@ -1,0 +1,73 @@
+
+.search-list input[type="text"] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid white;
+  border-right: none;
+  width: 80%;
+  background-color: white;
+  border-radius: 14px 0px 0px 14px;
+}
+.search-list input[type="text"]:focus{
+  outline: none;
+}
+.search-list:focus{
+  outline:none;
+}
+.search-list button {
+  float: right;
+  width: 20%;
+  padding: 10px;
+  background-color: white;
+  color: black;
+  font-size: 17px;
+  border: 1px solid white;
+  border-left: none;
+  cursor: pointer;
+
+  border-radius: 0px 14px 14px 0px;
+}
+
+.form-rounded {
+  border-radius: 15px;
+}
+.btn-add {
+  color: #153057;
+  background-color: white;
+  cursor: pointer;
+  font-size: 20px;
+}
+.lbl-add {
+  cursor: pointer;
+  margin-left: 8px;
+  font-size: 17px;
+}
+
+.guide-add{
+  /* position: fixed;
+  bottom: 10px; */
+}
+
+.card-header-list {
+  background-color: #ffffff;
+}
+.card-header-list img{
+  height: 30px;
+  width: 25px;
+}
+
+.span-list {
+  color: black;
+  font-weight: 550;
+  margin-left: 10px;
+}
+
+.icon-list {
+  color: grey;
+  margin-right: 10px;
+}
+
+.search-list {
+  margin-bottom: 25px;
+  border-radius: 15px;
+}

@@ -1,0 +1,28 @@
+.card-header-show{
+  background-color: #03224c;
+  color: white;
+  /* height: 75px; */
+  padding-top: 5px;
+  padding-bottom: 0px;
+  text-align: center;
+}
+.card-header-show h2{
+  margin-top: 8px;
+  margin-bottom: 5px;
+}
+.card-header-show div {
+  color: #bac4cf;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 30%;
+}
+/* .card-header-show h3 {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid white;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+}
+
+.card-header-show h3 span {
+   padding:0 10px;
+} */
